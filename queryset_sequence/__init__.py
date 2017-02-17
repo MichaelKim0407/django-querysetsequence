@@ -81,7 +81,7 @@ class QuerySequence(six.with_metaclass(PartialInheritanceMeta, Query)):
             qs.model = self._get_model(qs.model)
             # Also push this to the Query object since that holds it's own
             # reference to QuerySet.model instead of asking the QuerySet for it.
-            qs.query.model = qs.model
+            # qs.query.model = qs.model
 
             # Actually set the attribute.
             setattr(qs.model, '#', i)
